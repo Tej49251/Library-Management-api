@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Library Management System</h1>
+        
+        <!-- Section to Add a Book -->
+        <div class="card mt-4">
+            <div class="card-header">
+                Add a New Book
+            </div>
+            <div class="card-body">
+                <form id="addBookForm">
+                    <div class="form-group">
+                        <label for="bookTitle">Title</label>
+                        <input type="text" class="form-control" id="bookTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookAuthor">Author</label>
+                        <input type="text" class="form-control" id="bookAuthor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="publishedDate">Published Date</label>
+                        <input type="date" class="form-control" id="publishedDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookAvailable">Available</label>
+                        <select class="form-control" id="bookAvailable">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Book</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Section to Display Books -->
+        <div class="card mt-4">
+            <div class="card-header">
+                Available Books
+            </div>
+            <div class="card-body">
+                <ul class="list-group" id="bookList">
+                    <!-- Book list will be populated here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
